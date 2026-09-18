@@ -1,4 +1,4 @@
-#import <resource_bundle_accessor.h>
+#import <Foundation/NSObject.h>
 
 @interface YMKStylingRoadEventsSwiftResources : NSObject
 @end
