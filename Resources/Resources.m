@@ -1,4 +1,4 @@
-#import <Foundation/NSObject.h>
+#import <Foundation/Foundation.h>
 
 @interface YMKStylingRoadEventsSwiftResources : NSObject
 @end
@@ -7,7 +7,10 @@
 
 + (NSBundle *)mapkitResourcesBundle
 {
-    return SWIFTPM_MODULE_BUNDLE;
+    NSURL *contentsURL = [SWIFTPM_MODULE_BUNDLE.bundleURL
+        URLByAppendingPathComponent:@"Contents.bundle"
+                        isDirectory:YES];
+    return contentsURL ? [NSBundle bundleWithURL:contentsURL] : nil;
 }
 
 @end
